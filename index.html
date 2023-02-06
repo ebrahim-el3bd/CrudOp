@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Css/style.css">
+  <title>Document</title>
+</head>
+
+<body>
+<div class="crud">
+
+  <!-- ⁡⁢⁣⁢Start head⁡ ⁡⁡ -->
+  <div class="head">
+    <h2>Crud</h2>
+    <p>PRODUCT MANGEMENT SYSTEM</p>
+  </div>
+<!-- ⁡⁢⁣⁢End head⁡ -->
+
+  <!-- --------------------------------- -->
+
+  <!-- ⁡⁢⁣⁢Start input⁡ -->
+  <div class="inputs">
+  <input placeholder="Title" type="text" id="title">
+  <!-- ⁡⁢⁣⁢Start Price⁡⁡ -->
+  <div class="price">
+    <input onkeyup="getTotal()" type="number" id="price" placeholder=" Price">
+    <input onkeyup="getTotal()" type="number" id="taxes" placeholder=" Taxes">
+    <input onkeyup="getTotal()" type="number" id="ads" placeholder=" Ads">
+    <input onkeyup="getTotal()" type="number" id="discount" placeholder=" Discount">
+    <small id="total"> </small>
+  </div>
+  <!--⁡⁣⁢⁣ ⁡⁢⁣⁢End Price⁡⁡⁡ -->
+  <input type="number" id="count" placeholder=" Count">
+  <input type="text" id="category" placeholder=" Category">
+  <button id="submit">Create</button>
+  </div>
+  <!-- ⁡⁢⁣⁢End input⁡ -->
+
+<!-- ----------------------------------- -->
+
+  <!-- ⁡⁢⁣⁢Start Output⁡ -->
+  <div class="output">
+  <div class="searchBlock">
+    <input onkeyup="searchData(this.value)" type="text" placeholder="Search" id="search">
+    <div class="btnSearch">
+      <button onclick="getSearchMood(this.id)" id="searchTitle">Search By Title</button>
+      <button onclick="getSearchMood(this.id)" id="searchCategory">Search By Category</button>
+    </div>
+  </div>
+  <div id="deleteAll">
+    
+  </div>
+  <table>
+    <tr>
+      <th>Id</th>
+      <th>Title</th>
+      <th>Price</th>
+      <th>taxes</th>
+      <th>Ads</th>
+      <th>Discount</th>
+      <th>Total</th>
+      <th>Category</th>
+      <th>UpDate</th>
+      <th>Delete</th>
+    </tr>
+    <tbody id="tbody">
+      
+    </tbody>
+  </table>
+  </div>
+  <!-- ⁡⁢⁣⁢End Output⁡ -->
+</div>
+
+<!-- -script- -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>
